@@ -1,24 +1,34 @@
-var randomNumberOne = Math.floor(Math.random()*6)+1;
+document.getElementById("roll").addEventListener("click", handleClick)
 
-var randomDiceImgOne = "images/dice" + randomNumberOne + ".png";
+function handleClick() {
+// first random number
 
-var imgOne = document.querySelectorAll("img")[0];
+    var randomNumberOne = Math.floor(Math.random() * 6) + 1;
 
-imgOne.setAttribute("src", randomDiceImgOne);
+    var randomDiceImgOne = "images/dice" + randomNumberOne + ".png";
 
-var randomNumberTwo = Math.floor(Math.random()*6)+1;
+    var imgOne = document.querySelectorAll("img")[0];
 
-var randomDiceImgTwo = "images/dice" + randomNumberTwo + ".png";
+    imgOne.setAttribute("src", randomDiceImgOne);
 
-var imgTwo = document.querySelectorAll("img")[1];
+    // second random number
 
-imgTwo.setAttribute("src", randomDiceImgTwo);
+    var randomNumberTwo = Math.floor(Math.random() * 6) + 1;
 
-if (randomNumberOne > randomNumberTwo){
-    document.querySelector("h1").innerHTML = "Player One Wins!";
-}else if(randomNumberOne < randomNumberTwo){
-    document.querySelector("h1").innerHTML ="Player Two Wins!";
+    var randomDiceImgTwo = "images/dice" + randomNumberTwo + ".png";
 
-}else{
-    document.querySelector("h1").innerHTML = "Draw!";
+    var imgTwo = document.querySelectorAll("img")[1];
+
+    imgTwo.setAttribute("src", randomDiceImgTwo);
+
+    // validating 
+
+    if (randomNumberOne > randomNumberTwo) {
+        document.querySelector("h1").innerHTML = "Player One Wins!";
+    } else if (randomNumberOne < randomNumberTwo) {
+        document.querySelector("h1").innerHTML = "Player Two Wins!";
+    } else {
+        document.querySelector("h1").innerHTML = "Draw!";
+    }
+
 }
