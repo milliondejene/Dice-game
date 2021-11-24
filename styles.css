@@ -18,7 +18,7 @@ h1 {
   margin: 30px;
   font-family: 'Merienda', cursive;
   text-shadow: 5px 0 #232931;
-  font-size: 6rem;
+  font-size: 4rem;
   color: #FBE8D3;
 }
 h3 {
@@ -33,7 +33,7 @@ p {
 }
 
 img {
-  width: 80%;
+  width: 60%;
 }
 
 footer {
